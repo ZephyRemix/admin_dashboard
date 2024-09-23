@@ -1,0 +1,66 @@
+/* css reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+    border: 1px solid red;
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* dashboard layout */
+body {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: 20vh 80vh;
+}
+
+/* sidebar */
+.sidebar-title::before {
+    /* content: icon */
+}
+
+.sidebar-title {
+    margin-bottom: 4rem;
+}
+
+.sidebar-title + ul {
+    display: flex;
+    flex-direction: column;
+}
+
+ul li {
+    list-style: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+}
+
+:nth-last-child(1 of li.primary) {
+    margin-bottom: 4rem;
+}
+
+/* header */
