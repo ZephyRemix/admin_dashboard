@@ -5,7 +5,6 @@
   
   * {
     margin: 0;
-    /* border: 1px solid red; */
   }
   
   body {
@@ -124,16 +123,118 @@ input[type="search"] {
 
 .user-profile {
   grid-area: user-profile;
+
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+  padding-right: 3rem;
+  gap: 1.25rem;
+}
+
+.user-profile > span {
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .user-greeting {
-  grid-area: user-greeting;
+  grid-area: user-greeting; 
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+
+.user-greeting > p, h1 {
+  font-weight: bold;
 }
 
 .action-buttons {
   grid-area: user-actions;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-self: right;
+  align-self: center;
+  padding-right: 3rem;
 }
 
+.action-buttons > button {
+  background-color: #1a92d3;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-weight: bold;
 
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+}
 
+.action-buttons > button:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
 
+/* main content */
+
+/* cards section */
+.dashboard-main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 0.5fr 5fr 0.5fr 5fr;
+  gap: 1rem;
+  overflow: scroll;
+
+  padding: 1.5rem;
+  background-color: #e2e8f0;
+}
+
+.projects {
+  grid-row: 1 / -1;
+  grid-column: 1;
+
+  display: grid;
+  grid-template-rows: subgrid;
+}
+
+.projects > h2 {
+  grid-row: 1;
+}
+
+.project-cards {
+  grid-row: 2 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+  background-color: white;
+  position: relative;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+}
+
+.card p {
+  font-size: 0.8rem;
+}
+
+.card-action-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: right;
+
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+} 
+
+/* announcement section */
