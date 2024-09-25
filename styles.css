@@ -281,6 +281,41 @@ input[type="search"] {
 }
 
 /* trending section */
-.profile-card {
+.trending {
+  grid-row: 3 / -1;
+  grid-column: 2;
 
+  display: grid;
+  grid-template-rows: subgrid;
+}
+
+.trending-section.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  justify-content: center;
+  align-items: baseline;
+
+  padding-left: 75px;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile::before {
+  content: "";
+  padding: 1.5rem;
+  border: 1px solid black;
+  border-radius: 50%;
+
+  position: absolute;
+  left: -50px;
+  top: -0.35rem;
+}
+
+.profile > p:nth-child(1) {
+  color: black;
+  font-weight: 600;
 }
