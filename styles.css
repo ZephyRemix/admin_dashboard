@@ -211,12 +211,16 @@ input[type="search"] {
 }
 
 .card {
-  border: 1px solid;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 5px rgba(0,0,0,0.2);
   background-color: white;
   position: relative;
+}
+
+.card h2,
+.card p {
+  padding: 0 0.75rem;
 }
 
 .card h2 {
@@ -253,8 +257,8 @@ input[type="search"] {
   padding-left: 1rem;
 }
 
-.announcements article {
-  border-bottom: 1px solid;
+.announcements .card,
+.trending .card {
   margin: 0 1rem;
   padding: 1rem;
   border-radius: 10px;
@@ -262,11 +266,21 @@ input[type="search"] {
   background-color: white;
 }
 
-.announcements article h2 {
+.announcements .card h2 {
   font-size: 1rem;
 }
 
 .announcements article p {
   font-size: 0.75rem;
   color: #636363;
+}
+
+.announcements hr {
+  width: 90%;
+  margin: 0.5rem auto;
+}
+
+/* trending section */
+.profile-card {
+
 }
